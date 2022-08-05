@@ -11,16 +11,18 @@ massHole.push(document.getElementById(`hole${[i]}`))
 massHole.forEach(element => element.onclick=function(){
 
 	if (this.className != 'hole hole_has-mole') {
+		console.log(missclick)
 		missclick++;
 		document.getElementById('lost').innerHTML= missclick;
 		
-		if (missclick === 5); {
-		missclick = 0;
-		killclick= 0; 
+		if (missclick === 5) {
+		
 		alert('Поражение!');
 	
 		document.getElementById('lost').innerHTML= 0;
     	document.getElementById('dead').innerHTML= 0;
+    	missclick = 0;
+		killclick= 0; 
 		}
 	}
 
