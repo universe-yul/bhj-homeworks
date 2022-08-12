@@ -35,7 +35,6 @@ class Game {
     })
   }
 
-    
   success() {
     this.currentSymbol.classList.add('symbol_correct');
     this.currentSymbol = this.currentSymbol.nextElementSibling;
