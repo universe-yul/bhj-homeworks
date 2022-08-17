@@ -1,4 +1,3 @@
-
 const rotator = Array.from(document.querySelectorAll('.rotator__case'));
 let currentRotator = 0;
 changeText();
