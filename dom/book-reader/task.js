@@ -18,6 +18,6 @@
  			book.classList.remove('book_fs-small');
             book.classList.remove('book_fs-big');
  		}
- 	 })
+ 	})
  }
  
