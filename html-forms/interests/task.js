@@ -1,19 +1,17 @@
 const interestMenu = document.querySelectorAll('.interest__check');
 
 for (let elementMenu of interestMenu) {
-	subElementMenu = elementMenu.closest('.interest').querySelectorAll('.interest__check');
 	elementMenu.addEventListener('change', () => {
-		if (elementMenu.checked) {
-			if (subElementMenu) {
-				for (let subMenu of subElementMenu) {
+		const subElementMenu = elementMenu.closest('.interest').querySelectorAll('.interest__check');
+
+		if (elementMenu.checked && elementMenu.closest('ul.interests_active') == null) {
+			for (let subMenu of subElementMenu) {
 					subMenu.checked = true;
-				}
 			}
-		} else {
-			if (subElementMenu) {
-				for (let subMenu of subElementMenu) {
+			
+		} else if (!elementMenu.checked && elementMenu.closest('ul.interests_active') == null) {
+			for (let subMenu of subElementMenu) {
 					subMenu.checked = false;
-				}
 			}
 		}	
 	})
