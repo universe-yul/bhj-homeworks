@@ -11,7 +11,7 @@ button.addEventListener('click', (e) => {
 
 		task.innerHTML = 
 		`<div class="task__title"> 
-		${tasksInput.value};
+		${tasksInput.value}
 		</div>
 		<a href="#" class="task__remove">&times;</a>`;
 
